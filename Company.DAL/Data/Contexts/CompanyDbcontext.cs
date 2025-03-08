@@ -8,9 +8,9 @@ using Company.DAL.Models;
 using Microsoft.EntityFrameworkCore;
 namespace Company.DAL.Data.Contexts
 {
-    internal class CompantDbcontext : DbContext
+    public class CompanyDbcontext : DbContext
     {
-        public CompantDbcontext() : base()
+        public CompanyDbcontext() : base()
         {
              
         }
@@ -28,6 +28,7 @@ namespace Company.DAL.Data.Contexts
 
 
         public DbSet<Department> Departments { get; set; }
+        public object Department { get; set; }
     }
 
 }
